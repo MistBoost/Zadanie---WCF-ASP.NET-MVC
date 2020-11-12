@@ -7,6 +7,7 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
+using System.Web;
 using System.Web.Hosting;
 using System.Xml.Serialization;
 using WcfService.Models;
@@ -18,8 +19,7 @@ namespace WcfService
         public OsobaCollection GetOsobyList()
         {
             XmlSerializer serializer = new XmlSerializer(typeof(OsobaCollection));
-
-            StreamReader reader = new StreamReader(@"C:\Users\mistb\source\repos\ZadanieB\WcfService\App_Data\DataOsoby.xml");
+            StreamReader reader = new StreamReader(Path.Combine(HttpContext.Current.Request.PhysicalApplicationPath, @"App_Data\DataOsoby.xml"));
             OsobaCollection Osoby = (OsobaCollection)serializer.Deserialize(reader);
             reader.Close();
             return Osoby;
@@ -29,7 +29,7 @@ namespace WcfService
         {
             var osobaCollection = new OsobaCollection() { OsobyList = osoby };
             XmlSerializer x = new XmlSerializer(typeof(OsobaCollection));
-            TextWriter writer = new StreamWriter(@"C:\Users\mistb\source\repos\ZadanieB\WcfService\App_Data\DataOsoby.xml");
+            TextWriter writer = new StreamWriter(Path.Combine(HttpContext.Current.Request.PhysicalApplicationPath, @"App_Data\DataOsoby.xml"));
             x.Serialize(writer, osobaCollection);
             writer.Close();
         }

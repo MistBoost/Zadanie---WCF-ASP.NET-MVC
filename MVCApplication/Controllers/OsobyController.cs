@@ -16,7 +16,7 @@ namespace MVCApplication.Controllers
         readonly DataProviderServiceClient WcfServiceClient = new DataProviderServiceClient();
 
         //can be improved by creating separate class FilterHander (would be more readable)
-        public ActionResult Index(string menoSearchString, string priezviskoSearchString, string datumNarodeniaSearchDate, string ulicaSearchStrirng, string cisloSearchString)
+        public ActionResult Index(string menoSearchString, string priezviskoSearchString, string datumNarodeniaSearchDate, string ulicaSearchString, string cisloSearchString)
         {
             //list of Osoba from xml deserialization
             List<Osoba> result = WcfServiceClient.GetOsobyList().OsobyList;
@@ -51,9 +51,9 @@ namespace MVCApplication.Controllers
                     result.AddRange(temp);
                 }
             }
-            if (ulicaSearchStrirng != null && ulicaSearchStrirng != "" && result.Count > 0)
+            if (ulicaSearchString != null && ulicaSearchString != "" && result.Count > 0)
             {
-                var temp = (WcfServiceClient.GetOsobyByUlica(ulicaSearchStrirng, result.ToArray())).ToList();
+                var temp = (WcfServiceClient.GetOsobyByUlica(ulicaSearchString, result.ToArray())).ToList();
                 result = new List<Osoba>();
                 if (temp.Count > 0)
                 {
