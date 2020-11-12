@@ -1,0 +1,69 @@
+﻿@model IEnumerable<WcfService.Models.Osoba>
+<center>
+    @{
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+
+    <h3 style="margin:10px">Browse</h3>
+
+    <p>
+        @Html.ActionLink("Create New", "Create")
+
+        @using (Html.BeginForm("Index", "Osoby", FormMethod.Get))
+        {
+    <p style="width:auto">
+        Meno: @Html.TextBox("menoSearchString")
+        Priezvisko: @Html.TextBox("priezviskoSearchString")
+        Datum narodenia: @Html.TextBox("datumNarodeniaSearchDate", null, new { htmlAttributes = new { placeholder = "dd/mm/yyyy" } })
+        Ulica: @Html.TextBox("ulicaSearchString") <br/>
+        Cislo: @Html.TextBox("cisloSearchString")
+        <input type="submit" class="btn btn-primary" style="margin:10px" value="Filter" />
+    </p>
+    }
+        </p>
+        <table class="table table-hover">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Meno)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Priezvisko)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DatumNarodenia)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Adresa.Ulica)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Adresa.Cislo)
+                </th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Meno)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Priezvisko)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DatumNarodenia)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Adresa.Ulica)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Adresa.Cislo)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                    </td>
+                </tr>
+            }
+        </table>
+    </center>

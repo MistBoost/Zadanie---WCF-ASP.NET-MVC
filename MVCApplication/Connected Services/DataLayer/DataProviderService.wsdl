@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="DataProviderService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:21016/DataProviderService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:21016/DataProviderService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:21016/DataProviderService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WcfService.Models" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IDataProviderService_GetOsobyList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOsobyList" />
+  </wsdl:message>
+  <wsdl:message name="IDataProviderService_GetOsobyList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOsobyListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataProviderService_SaveOsobyToXml_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveOsobyToXml" />
+  </wsdl:message>
+  <wsdl:message name="IDataProviderService_SaveOsobyToXml_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveOsobyToXmlResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataProviderService_GetOsobaByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOsobaByID" />
+  </wsdl:message>
+  <wsdl:message name="IDataProviderService_GetOsobaByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOsobaByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataProviderService_AddOsoba_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddOsoba" />
+  </wsdl:message>
+  <wsdl:message name="IDataProviderService_AddOsoba_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddOsobaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataProviderService_DeleteOsobaById_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteOsobaById" />
+  </wsdl:message>
+  <wsdl:message name="IDataProviderService_DeleteOsobaById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteOsobaByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataProviderService_EditOsoba_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditOsoba" />
+  </wsdl:message>
+  <wsdl:message name="IDataProviderService_EditOsoba_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditOsobaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataProviderService_GetOsobyByMeno_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOsobyByMeno" />
+  </wsdl:message>
+  <wsdl:message name="IDataProviderService_GetOsobyByMeno_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOsobyByMenoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataProviderService_GetOsobyByPriezvisko_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOsobyByPriezvisko" />
+  </wsdl:message>
+  <wsdl:message name="IDataProviderService_GetOsobyByPriezvisko_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOsobyByPriezviskoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataProviderService_GetOsobyByDatumNarodenia_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOsobyByDatumNarodenia" />
+  </wsdl:message>
+  <wsdl:message name="IDataProviderService_GetOsobyByDatumNarodenia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOsobyByDatumNarodeniaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataProviderService_GetOsobyByUlica_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOsobyByUlica" />
+  </wsdl:message>
+  <wsdl:message name="IDataProviderService_GetOsobyByUlica_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOsobyByUlicaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataProviderService_GetOsobyByCislo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOsobyByCislo" />
+  </wsdl:message>
+  <wsdl:message name="IDataProviderService_GetOsobyByCislo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOsobyByCisloResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IDataProviderService">
+    <wsdl:operation name="GetOsobyList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataProviderService/GetOsobyList" message="tns:IDataProviderService_GetOsobyList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataProviderService/GetOsobyListResponse" message="tns:IDataProviderService_GetOsobyList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveOsobyToXml">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataProviderService/SaveOsobyToXml" message="tns:IDataProviderService_SaveOsobyToXml_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataProviderService/SaveOsobyToXmlResponse" message="tns:IDataProviderService_SaveOsobyToXml_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOsobaByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataProviderService/GetOsobaByID" message="tns:IDataProviderService_GetOsobaByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataProviderService/GetOsobaByIDResponse" message="tns:IDataProviderService_GetOsobaByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddOsoba">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataProviderService/AddOsoba" message="tns:IDataProviderService_AddOsoba_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataProviderService/AddOsobaResponse" message="tns:IDataProviderService_AddOsoba_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteOsobaById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataProviderService/DeleteOsobaById" message="tns:IDataProviderService_DeleteOsobaById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataProviderService/DeleteOsobaByIdResponse" message="tns:IDataProviderService_DeleteOsobaById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditOsoba">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataProviderService/EditOsoba" message="tns:IDataProviderService_EditOsoba_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataProviderService/EditOsobaResponse" message="tns:IDataProviderService_EditOsoba_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOsobyByMeno">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataProviderService/GetOsobyByMeno" message="tns:IDataProviderService_GetOsobyByMeno_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataProviderService/GetOsobyByMenoResponse" message="tns:IDataProviderService_GetOsobyByMeno_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOsobyByPriezvisko">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataProviderService/GetOsobyByPriezvisko" message="tns:IDataProviderService_GetOsobyByPriezvisko_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataProviderService/GetOsobyByPriezviskoResponse" message="tns:IDataProviderService_GetOsobyByPriezvisko_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOsobyByDatumNarodenia">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataProviderService/GetOsobyByDatumNarodenia" message="tns:IDataProviderService_GetOsobyByDatumNarodenia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataProviderService/GetOsobyByDatumNarodeniaResponse" message="tns:IDataProviderService_GetOsobyByDatumNarodenia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOsobyByUlica">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataProviderService/GetOsobyByUlica" message="tns:IDataProviderService_GetOsobyByUlica_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataProviderService/GetOsobyByUlicaResponse" message="tns:IDataProviderService_GetOsobyByUlica_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOsobyByCislo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataProviderService/GetOsobyByCislo" message="tns:IDataProviderService_GetOsobyByCislo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataProviderService/GetOsobyByCisloResponse" message="tns:IDataProviderService_GetOsobyByCislo_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IDataProviderService" type="tns:IDataProviderService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetOsobyList">
+      <soap:operation soapAction="http://tempuri.org/IDataProviderService/GetOsobyList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveOsobyToXml">
+      <soap:operation soapAction="http://tempuri.org/IDataProviderService/SaveOsobyToXml" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOsobaByID">
+      <soap:operation soapAction="http://tempuri.org/IDataProviderService/GetOsobaByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddOsoba">
+      <soap:operation soapAction="http://tempuri.org/IDataProviderService/AddOsoba" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteOsobaById">
+      <soap:operation soapAction="http://tempuri.org/IDataProviderService/DeleteOsobaById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditOsoba">
+      <soap:operation soapAction="http://tempuri.org/IDataProviderService/EditOsoba" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOsobyByMeno">
+      <soap:operation soapAction="http://tempuri.org/IDataProviderService/GetOsobyByMeno" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOsobyByPriezvisko">
+      <soap:operation soapAction="http://tempuri.org/IDataProviderService/GetOsobyByPriezvisko" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOsobyByDatumNarodenia">
+      <soap:operation soapAction="http://tempuri.org/IDataProviderService/GetOsobyByDatumNarodenia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOsobyByUlica">
+      <soap:operation soapAction="http://tempuri.org/IDataProviderService/GetOsobyByUlica" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOsobyByCislo">
+      <soap:operation soapAction="http://tempuri.org/IDataProviderService/GetOsobyByCislo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DataProviderService">
+    <wsdl:port name="BasicHttpBinding_IDataProviderService" binding="tns:BasicHttpBinding_IDataProviderService">
+      <soap:address location="http://localhost:21016/DataProviderService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

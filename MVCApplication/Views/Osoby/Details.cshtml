@@ -1,0 +1,56 @@
+﻿@model WcfService.Models.Osoba
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3>Detail</h3>
+
+<div>
+    <h4>Osoba</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Meno)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Meno)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Priezvisko)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Priezvisko)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DatumNarodenia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DatumNarodenia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Adresa.Ulica)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Adresa.Ulica)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Adresa.Cislo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Adresa.Cislo)
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Back to Browse", "Index")
+</p>

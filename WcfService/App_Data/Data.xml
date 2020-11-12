@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfOsoba xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Osoba>
+    <ID>1</ID>
+    <Meno>Jan</Meno>
+    <Priezvisko>Novy</Priezvisko>
+    <DatumNarodenia>2000-12-12T00:00:00</DatumNarodenia>
+    <Adresa>
+      <Ulica>Komenskeho</Ulica>
+      <Cislo>2</Cislo>
+    </Adresa>
+  </Osoba>
+  <Osoba>
+    <ID>3</ID>
+    <Meno>Jan</Meno>
+    <Priezvisko>Novy</Priezvisko>
+    <DatumNarodenia>2000-12-12T00:00:00</DatumNarodenia>
+    <Adresa>
+      <Ulica>Komenskeho</Ulica>
+      <Cislo>2</Cislo>
+    </Adresa>
+  </Osoba>
+  <Osoba>
+    <ID>2</ID>
+    <Meno>123</Meno>
+    <Priezvisko>123</Priezvisko>
+    <DatumNarodenia>0001-01-01T00:00:00</DatumNarodenia>
+    <Adresa>
+      <Ulica>123</Ulica>
+      <Cislo>123</Cislo>
+    </Adresa>
+  </Osoba>
+</ArrayOfOsoba>

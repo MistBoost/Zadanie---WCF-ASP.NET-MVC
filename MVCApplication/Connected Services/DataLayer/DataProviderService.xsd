@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:21016/DataProviderService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WcfService.Models" />
+  <xs:element name="GetOsobyList">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOsobyListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WcfService.Models" minOccurs="0" name="GetOsobyListResult" nillable="true" type="q1:OsobaCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveOsobyToXml">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WcfService.Models" minOccurs="0" name="osoby" nillable="true" type="q2:ArrayOfOsoba" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveOsobyToXmlResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOsobaByID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOsobaByIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WcfService.Models" minOccurs="0" name="GetOsobaByIDResult" nillable="true" type="q3:Osoba" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddOsoba">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Meno" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Priezvisko" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DatumNarodenia" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="Ulica" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Cislo" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddOsobaResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteOsobaById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteOsobaByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteOsobaByIdResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditOsoba">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+        <xs:element minOccurs="0" name="Meno" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Priezvisko" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DatumNarodenia" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="Ulica" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Cislo" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditOsobaResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOsobyByMeno">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="c" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOsobyByMenoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/WcfService.Models" minOccurs="0" name="GetOsobyByMenoResult" nillable="true" type="q4:ArrayOfOsoba" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOsobyByPriezvisko">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="c" nillable="true" type="xs:string" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/WcfService.Models" minOccurs="0" name="s" nillable="true" type="q5:ArrayOfOsoba" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOsobyByPriezviskoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/WcfService.Models" minOccurs="0" name="GetOsobyByPriezviskoResult" nillable="true" type="q6:ArrayOfOsoba" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOsobyByDatumNarodenia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dt" type="xs:dateTime" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/WcfService.Models" minOccurs="0" name="s" nillable="true" type="q7:ArrayOfOsoba" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOsobyByDatumNarodeniaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/WcfService.Models" minOccurs="0" name="GetOsobyByDatumNarodeniaResult" nillable="true" type="q8:ArrayOfOsoba" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOsobyByUlica">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="c" nillable="true" type="xs:string" />
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/WcfService.Models" minOccurs="0" name="s" nillable="true" type="q9:ArrayOfOsoba" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOsobyByUlicaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/WcfService.Models" minOccurs="0" name="GetOsobyByUlicaResult" nillable="true" type="q10:ArrayOfOsoba" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOsobyByCislo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="i" type="xs:int" />
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/WcfService.Models" minOccurs="0" name="s" nillable="true" type="q11:ArrayOfOsoba" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOsobyByCisloResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/WcfService.Models" minOccurs="0" name="GetOsobyByCisloResult" nillable="true" type="q12:ArrayOfOsoba" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
